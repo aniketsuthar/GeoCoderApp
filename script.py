@@ -1,7 +1,7 @@
 import pandas
-from flask import Flask, render_template, flash, request, redirect
+from flask import Flask, render_template, flash, request, redirect, send_file
 from geopy.geocoders import ArcGIS
-
+import datetime
 import requests
 from bs4 import BeautifulSoup
 
@@ -67,7 +67,7 @@ def home_page():
 @app.route('/download', methods=['GET', 'POST'])
 def download_csv():
     if request.method == 'POST':
-        r = requests.get('https://desolate-earth-87881.herokuapp.com/download')
+        r = requests.get('https://desolate-earth-87881.herokuapp.com/')
         s = BeautifulSoup(r.content, 'html.parser')
 
         # empty list
@@ -102,8 +102,9 @@ def download_csv():
 
         # Converting Pandas DataFrame
         # into CSV file
-        data_frame.to_csv('output.csv')
-        return render_template('home.html', table=table)
+        filename = datetime.datetime.now().strftime('%Y %d %m %H %M %S %f') + ".csv"
+        data_frame.to_csv('uploads/' + filename, index=None)
+        return send_file('uploads/' + filename, attachment_filename='output.csv', as_attachment=True)
 
     else:
         return render_template('home.html', table=table)
