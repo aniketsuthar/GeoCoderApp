@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 nom = ArcGIS()
 app = Flask(__name__)
-UPLOAD_FOLDER = '/media/aniket/D/GeoCoderApp/files/'
+UPLOAD_FOLDER = 'files/'
 ALLOWED_EXTENSIONS = {'csv'}
 
 
