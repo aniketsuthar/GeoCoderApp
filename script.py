@@ -10,6 +10,8 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'files/'
 ALLOWED_EXTENSIONS = {'csv'}
 
+table = ''
+
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -74,7 +76,7 @@ def download_csv():
         # for getting the header from
         # the HTML file
         list_header = []
-        header = s.find_all("table")[0].find("tr")
+        header = s.find("table").find("tr")
 
         for items in header:
             try:
