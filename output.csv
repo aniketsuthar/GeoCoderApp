@@ -1,0 +1,7 @@
+,,ID,address,City,State,Country,Name,Employees,Latitude,Longitude
+0,0,1,"3666 21st St,San Francisco,CA 94114,USA",San Francisco,CA 94114,USA,Madeira,8,37.756648,-122.429375
+1,1,2,"735 Dolores St,San Francisco,CA 94119,USA",San Francisco,CA 94119,USA,Bready Shop,15,37.757819,-122.425337
+2,2,3,"332 Hill St,San Francisco,California 94114,USA",San Francisco,California 94114,USA,Super River,25,37.755875,-122.428816
+3,3,4,"3995 23rd St,San Francisco,CA 94114,USA",San Francisco,CA 94114,USA,Ben's Shop,10,37.752922,-122.431697
+4,4,5,"1056 Sanchez St,San Francisco,California,USA",San Francisco,California,USA,Sanchez,12,37.752131,-122.430028
+5,5,6,"551 Alvarado St,San Francisco,CA 94114,USA",San Francisco,CA 94114,USA,Richvalley,20,37.753511,-122.433229
