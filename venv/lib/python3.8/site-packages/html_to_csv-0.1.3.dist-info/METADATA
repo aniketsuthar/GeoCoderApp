@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: html-to-csv
+Version: 0.1.3
+Summary: A utility that extracts tables from HTML documents and converts them to CSV format
+Home-page: https://github.com/hanwentao/html2csv
+Author: Wentao Han
+Author-email: wentao.han@gmail.com
+License: UNKNOWN
+Keywords: html table csv convert
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: setuptools ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: tox ; extra == 'test'
+
+# html2csv
+
+[![Build Status](https://travis-ci.com/hanwentao/html2csv.svg?branch=master)](https://travis-ci.com/hanwentao/html2csv)
+
+`html2csv` is a utility that extracts tables from HTML documents and converts them to CSV format, written in Python.
+
+[![asciicast](https://asciinema.org/a/259747.svg)](https://asciinema.org/a/259747)
+
+## Setup
+
+Python 3 is required (version >=3.6).  Install `html2csv` by `pip`.
+
+```
+pip install html-to-csv
+```
+
+Yes, the package name is `html-to-csv` due to collision ;-)
+
+## Examples
+
+Input from the standard input, and output to the standard output.
+
+    html2csv
+
+Input from a file, and output to the standard output.
+
+    html2csv example.html
+
+Input from files, and output to a file.
+
+    html2csv example1.html example2.html -o output.csv
+
+Input from the network, and output to the standard output.
+
+    html2csv http://example.com
+
+## Usage
+
+```
+usage: html2csv [-h] [-o [OUTPUT]] [-e ENGINE] [-V] [input [input ...]]
+
+Convert HTML table to CSV format.
+
+positional arguments:
+  input                 input sources (files, URLs, etc., default: standard
+                        input)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -o [OUTPUT], --output [OUTPUT]
+                        output target (default: standard output)
+  -e ENGINE, --engine ENGINE
+                        HTML parser engine (default: html.parser or lxml if
+                        installed)
+  -V, --version         display version
+```
+
+## Author and Contact
+
+Wentao Han (wentao.han@gmail.com)
+
+

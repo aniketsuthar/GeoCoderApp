@@ -1,0 +1,3 @@
+[console_scripts]
+html2csv = html2csv.__main__:main
+

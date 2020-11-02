@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="home">
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+
+    <meta charset="UTF-8">
+    <title>Welcome to GEO coder App</title>
+</head>
+<div class="container">
+    <body>
+    <h2>
+        GEO Coder App
+    </h2>
+    <p>Please upload your CSV file with Address value should be in column named as a Address or address</p>
+    {%block content%}
+
+    <form method=post enctype=multipart/form-data>
+        <input type=file name=file>
+        <input type=submit value=Submit>
+        <div class="table">
+            {{ table| safe }}
+        </div>
+        <p>{{msg | safe }}</p>
+    </form>
+    <form action="/download" method="post">
+        <button type="submit" name="Download">Download</button>
+    </form>
+    {%endblock%}
+    </body>
+</div>
+</html>

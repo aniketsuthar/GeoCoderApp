@@ -1,0 +1,23 @@
+div.table {
+  padding: 10px 0 30px 0;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  table-layout:auto;
+
+}
+div.container {
+
+    margin: auto;
+    text-align: center;
+}
+
+table.dataframe {
+  table-layout: auto;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+body {
+  background-color:  #26734d;
+ }
