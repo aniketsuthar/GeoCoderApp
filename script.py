@@ -67,7 +67,7 @@ def home_page():
 @app.route('/download', methods=['GET', 'POST'])
 def download_csv():
     if request.method == 'POST':
-        r = requests.get('https://desolate-earth-87881.herokuapp.com/download')
+        r = requests.get('https://desolate-earth-8hr7881.herokuapp.com/download')
         s = BeautifulSoup(r.content, 'html.parser')
 
         # empty list
